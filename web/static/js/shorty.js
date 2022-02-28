@@ -6,9 +6,9 @@ function getShorty(){
 
     $.ajax({
         type:'POST',
-        url:'localhost:4040/get-shorty',
+        url:'http://localhost:4040/get-shorty',
         data:url,
-        headers: {'Access-Control-Allow-Origin' : 'localhost:4040'}
+        headers: {'Access-Control-Allow-Origin' : 'http://localhost:4040/get-shorty'}
     })
 
     document.getElementById('shorty').innerHTML = "text"
