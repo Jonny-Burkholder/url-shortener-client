@@ -7,21 +7,22 @@
     <script src="static/shorty.js"></script>
 
 </head>
-<body style="background-color:rgb(65, 65, 168)">
+<body>
 
     <div class = "wrapper">
-        <div class = overlay>
-            <div></div>
-            <div class="col-md-5" style="background-color:rgba(173, 173, 231, .3); color:rgb(51, 53, 51)">
+        <div class = "overlay">
+            <div class="form-body">
+                <div class="col-md-5" style="background-color:rgba(173, 173, 231, .3); color:rgb(51, 53, 51)">
                 <h1 class="text-center">Enter a URL to shorten</h1>
                 <div class="form md-5">
                     <div class="col-10">
                         <label for="url">Enter the url that you would like to shorten</label>
                         <input type="text" name="url" id="url" class="form-control" placeholder="example.com">
-                        <button type="button" class="btn btn-primary" onclick="$.getShorty()"
+                        <button type="button" class="btn btn-primary" onclick="$.getShorty()">Get Shorty</button>
                     </div>
                 </div>
                 <p id="shorty"></p>
+                </div>
             </div>
         </div>
     </div>
