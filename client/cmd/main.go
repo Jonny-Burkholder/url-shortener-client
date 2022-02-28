@@ -28,7 +28,7 @@ func myRecoverFunc() {
 	}
 }
 
-const templatePath = "../../web/template"
+const templatePath = "../../web/template/*.html"
 
 var funcMap = template.FuncMap{}
 
