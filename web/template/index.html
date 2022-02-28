@@ -4,7 +4,9 @@
 
     {{template "stub.bootstrapheader.html"}}
 
-    <script src="static/shorty.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="static/js/shorty.js"></script>
 
 </head>
 <body>
@@ -18,7 +20,7 @@
                     <div class="col-10">
                         <label for="url">Enter the url that you would like to shorten</label>
                         <input type="text" name="url" id="url" class="form-control" placeholder="example.com">
-                        <button type="button" class="btn btn-primary" onclick="$.getShorty()">Get Shorty</button>
+                        <button type="button" class="btn btn-primary" onclick="getShorty()">Get Shorty</button>
                     </div>
                 </div>
                 <p id="shorty"></p>
