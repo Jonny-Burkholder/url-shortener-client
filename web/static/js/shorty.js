@@ -1,18 +1,29 @@
 function getShorty(){
 
-    console.log("Calling this function")
+    console.log("Calling this function");
 
-    let url = document.getElementById('url').value
+    let input = document.getElementById('url').value;
 
     $.ajax({
-        type:'POST',
+        type:'post',
         url:'http://localhost:4040/get-shorty',
-        data:url,
-        headers: {'Access-Control-Allow-Origin' : 'http://localhost:4040/get-shorty'}
+        dataType: 'json',
+        data:input,
+        headers: {'Access-Control-Allow-Origin' : '*'},
+        contentType: 'application/json; charset=urf-8',
+    })
+    .done(function(data, status, jqxhr){
+        console.log("Great success!");
+        console.log(data, status, jqxhr);
     })
 
-    document.getElementById('shorty').innerHTML = "text"
+    .fail(function(jqxhr, status, error){
+        console.log("Failure");
+        console.log(jqxhr, status, error);
+    })
 
-    document.getElementById('url').value = ""
+    document.getElementById('shorty').innerHTML = "text";
+
+    document.getElementById('url').value = "";
 
 }
