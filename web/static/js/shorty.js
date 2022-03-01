@@ -7,7 +7,7 @@ function getShorty(){
     $.ajax({
         type:'post',
         url:'http://localhost:4040/get-shorty',
-        dataType: 'json',
+        dataType: 'jsonp',
         data:input,
         headers: {'Access-Control-Allow-Origin' : '*'},
         contentType: 'application/json; charset=urf-8',
