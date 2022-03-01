@@ -5,10 +5,11 @@ function getShorty(){
     let input = document.getElementById('url').value;
 
     $.ajax({
-        type:'post',
+        method:'POST',
+        type: 'POST',
         url:'http://localhost:4040/get-shorty',
-        dataType: 'jsonp',
-        data:input,
+        dataType: 'json',
+        data:JSON.stringify(input),
         headers: {'Access-Control-Allow-Origin' : '*'},
         contentType: 'application/json; charset=urf-8',
     })
